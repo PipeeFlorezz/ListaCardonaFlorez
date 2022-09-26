@@ -1,0 +1,38 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Fecha de nacimiento</th>
+        <th scope="col">País</th>
+        <th scope="col">Altura</th>
+        <th scope="col">ColorPiel</th>
+        <th scope="col">Hobbie</th>
+        <th scope="col">Fortaleza</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let estudiante of estudiantes; let i = index"
+       [ngClass]="{
+        'Argentina': estudiante.pais == 'Argentina',
+        'Colombia': estudiante.pais == 'Colombia',
+        'Bolivia': estudiante.pais == 'Bolivia',
+        'Peru': estudiante.pais == 'Peru',
+        'center-line': estudiante.altura > 1.90,
+        'Natacion': estudiante.hobbie == 'Natacion',
+        'Tennis': estudiante.hobbie == 'Tennis',
+        'Futbol': estudiante.hobbie == 'Futbol'
+       }">
+        <th scope="row">{{i + 1}}.</th>
+        <td>{{estudiante.nombre}}</td>
+        <td>{{estudiante.nacimiento | date: 'medium' }}</td>
+        <td>{{estudiante.pais}}</td>
+        <td>{{estudiante.altura}}</td>
+        <td>{{estudiante.colorPiel}}</td>
+        <td>{{estudiante.hobbie}}</td>
+        <td>{{estudiante.fortaleza}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+

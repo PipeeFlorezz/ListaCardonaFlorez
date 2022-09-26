@@ -1,0 +1,32 @@
+.Argentina {
+    background-color: blue;
+}
+
+.Colombia {
+    background-color: yellow;
+}
+
+.Bolivia {
+    background-color: green;
+}
+
+.Peru {
+    background-color: red;
+}
+
+.center-line {
+    text-decoration: line-through;
+}
+
+
+.Natacion {
+    border: 1px dashed blueviolet;
+}
+
+.Tennis {
+    border: 2px solid rgb(1, 21, 1);   
+}
+
+.Futbol {
+    border: 3px dotted grey;   
+}
